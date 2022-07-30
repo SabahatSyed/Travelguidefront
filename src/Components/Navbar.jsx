@@ -13,7 +13,7 @@ function Navbar() {
     const navigate = useNavigate();
     // const auth = getAuth(app);
     const logout=()=>{
-        axios.get('http://localhost:8080/admin/logout')
+        axios.get('https://ttravel-guideback.herokuapp.com/admin/logout')
             .then(res => {
 
                 console.log("sca",res)

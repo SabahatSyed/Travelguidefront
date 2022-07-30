@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import img from '../assets/graph.png';
-import Navbar from './Navbar'
-import Header from './Header'
+
 import GraphInfo from './GraphInfo';
 const AdminGraph = () => {
 

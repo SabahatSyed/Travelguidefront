@@ -7,10 +7,7 @@ import { Row , Col,Form, Button, FormGroup, FormControl, ControlLabel } from "re
 import Container from 'react-bootstrap/Container';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-import { Modal } from 'react-bootstrap';
-import Navbar from './Navbar'
-import Header from './Header'
-import { Link } from "react-router-dom";
+
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -23,15 +20,10 @@ export default function LoginForm(){
     const [strEmail,setEmail]=useState('');
     const [strPassword,setPassword]=useState('');
     const navigate = useNavigate();
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const [newpass,setnew]=useState('');
-    const [confirmpass,setconfirm]=useState('');
-
+  
     
     const clickfun= ()=>{
-        axios.post('http://localhost:8080/admin/login', {
+        axios.post('https://ttravel-guideback.herokuapp.com/admin/login', {
             password:strPassword,email:strEmail
           }).then(function (response){
             console.log("response",response)

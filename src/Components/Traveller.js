@@ -109,7 +109,7 @@ const Traveller = () => {
     
     //Data is fetching and seting it Equal to setPosts State
     useEffect(()=> {
-        axios.get('http://localhost:8080/admin/traveler')
+        axios.get('https://ttravel-guideback.herokuapp.com/admin/traveler')
             .then(res => {
 
                 setPosts(res.data);

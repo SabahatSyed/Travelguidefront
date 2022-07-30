@@ -44,23 +44,10 @@ function Rating() {
     ]
     const len= Reviews.length+122
     
-    /*useState(async()=> {
-        console.log('ds')
-       await axios.get('http://localhost:8080/admin/guidesdetail/'+location.state.email)
-            .then(res => {
-
-                setPost(res.data[0].city);
-                p=res.data
-                console.log("sca",res.data[0].city)
-                
-
-            })
-    })
-
-*/
+    
 useEffect(()=>{
 
-     axios.get('http://localhost:8080/admin/guidesdetail/'+location.email)
+     axios.get('https://ttravel-guideback.herokuapp.com/admin/guidesdetail/'+location.email)
             .then(res => {
 
                

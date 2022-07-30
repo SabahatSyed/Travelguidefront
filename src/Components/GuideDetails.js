@@ -7,7 +7,7 @@ const GuideDetails = () => {
     let location = useLocation();
 
     useEffect( ()=> {
-        axios.get('http://localhost:8080/admin/guidesdetail/'+location.state.email)
+        axios.get('https://ttravel-guideback.herokuapp.com/admin/guidesdetail/'+location.state.email)
             .then(res => {
 
                 setPosts(res.data);
